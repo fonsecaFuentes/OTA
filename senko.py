@@ -72,11 +72,18 @@ class Senko:
             try:
                 with open(file, "r") as local_file:
                     local_version = local_file.read()
-            except:
-                local_version = ""
 
-            if not self._check_hash(latest_version, local_version):
+                if latest_version != local_version:
+                    changes.append(file)
+
+            except Exception as e:
+                print("Exception:", e)
                 changes.append(file)
+            # except:
+            #     local_version = ""
+
+            # if not self._check_hash(latest_version, local_version):
+            #     changes.append(file)
 
         return changes
 
