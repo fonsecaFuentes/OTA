@@ -4,23 +4,23 @@ import senko
 
 led = Pin(2, Pin.OUT)
 
-version = "1.0.3"
+version = "1.0.4"
 OTA = senko.Senko(user="fonsecaFuentes", repo="OTA", files=["boot.py", "main.py"])
 
 while True:
     # parpadear
     led.value(1)
-    sleep(0.2)
+    sleep(0.1)
     led.value(0)
-    sleep(0.2)
+    sleep(0.1)
     led.value(1)
-    sleep(0.2)
+    sleep(0.1)
     led.value(0)
-    sleep(0.2)
+    sleep(0.1)
     led.value(1)
-    sleep(0.2)
+    sleep(0.1)
     led.value(0)
-    sleep(0.2)
+    sleep(0.1)
     if OTA.fetch():
         print("A newer version is available!")
         machine.reset()
