@@ -5,7 +5,7 @@ import senko
 led = Pin(2, Pin.OUT)
 
 version = "1.0.1"
-OTA = senko.Senko(user="maxhuyk", repo="ota", files=["boot.py", "main.py"])
+OTA = senko.Senko(user="fonsecaFuentes", repo="OTA", files=["boot.py", "main.py"])
 
 while True:
     # parpadear
