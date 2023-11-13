@@ -42,7 +42,7 @@ def main():
 
     import senko
 
-    OTA = senko.Senko(user="maxhuyk", repo="ota", files=["boot.py", "main.py"])
+    OTA = senko.Senko(user="fonsecaFuentes", repo="ota", files=["boot.py", "main.py"])
 
     if OTA.update():
         print("Updated to the latest version! Rebooting...")
